@@ -14,20 +14,7 @@ public class Cliente {
         this.veiculos = new ArrayList<>();
      
     }
-
-<<<<<<< HEAD
-    public Cliente(String nome, String email, int cpf) {
-=======
-    public Cliente(String nome, String email, int cpf, List<Veiculo> veiculos) {
-
->>>>>>> f5eb4c458e7b43bbcd2b4db8f5acb84ac0a215db
-        this.nome = nome;
-        this.email = email;
-        this.cpf = cpf;
-        this.veiculos = new ArrayList<>();
-    }
-
-    public boolean removerVeiculo(String placa) {
+ public boolean removerVeiculo(String placa) {
     for (Veiculo v : veiculos) {
         if (v.getPlaca().equalsIgnoreCase(placa)) {
             veiculos.remove(v);
@@ -36,6 +23,14 @@ public class Cliente {
     }
     return false;
 }
+    public Cliente(String nome, String email, int cpf) {
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.veiculos = new ArrayList<>();
+    }
+
+  
     public String getNome() {
         return nome;
     }
@@ -71,16 +66,18 @@ public class Cliente {
     }
 
     public String exibe(){
-        String texto = "Cliente: " + nome +
-                   "\nEmail: " + email +
-                   "\nCPF: " + cpf +
-                   "\nVeículos:";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente: ").append(nome)
+          .append("\nEmail: ").append(email)
+          .append("\nCPF: ").append(cpf)
+          .append("\nVeículos:");
 
         for (Veiculo v : veiculos) {
-            texto += "\n - " + v.exibe();
-    } 
-      return texto;
+            sb.append("\n  - ").append(v.toString());
+        }
+
+        return sb.toString();
     }
-}
+    }
 
 
