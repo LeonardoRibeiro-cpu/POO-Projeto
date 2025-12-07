@@ -44,7 +44,7 @@ public class Estacionamento {
     }
     public Cliente buscarClientePorCpf(String cpf) {
     for (Cliente c : clientes) {
-        if (c.getCpf() == cpf) {
+        if (c.getCpf().equals(cpf)) {
             return c;
         }
     }
@@ -97,7 +97,7 @@ public class Estacionamento {
     }
     public boolean removerCliente(String cpf) {
     for (Cliente c : clientes) {
-        if (c.getCpf() == cpf) {
+        if (c.getCpf().equals(cpf)) {
             clientes.remove(c);
             return true;
         }
