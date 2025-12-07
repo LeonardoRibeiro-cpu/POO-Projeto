@@ -6,7 +6,7 @@ import java.util.List;
 public class Cliente {
     private String nome;
     private String email;
-    private int cpf;
+    private String cpf;
     private List<Veiculo> veiculos;
 
 
@@ -23,7 +23,7 @@ public class Cliente {
     }
     return false;
 }
-    public Cliente(String nome, String email, int cpf) {
+    public Cliente(String nome, String email, String cpf) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
@@ -47,11 +47,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

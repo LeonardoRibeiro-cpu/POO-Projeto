@@ -42,7 +42,7 @@ public class Estacionamento {
 
         return vagas.get(numero - 1).liberar();
     }
-    public Cliente buscarClientePorCpf(int cpf) {
+    public Cliente buscarClientePorCpf(String cpf) {
     for (Cliente c : clientes) {
         if (c.getCpf() == cpf) {
             return c;
@@ -95,7 +95,7 @@ public class Estacionamento {
             System.out.println(c.exibe());
         }
     }
-    public boolean removerCliente(int cpf) {
+    public boolean removerCliente(String cpf) {
     for (Cliente c : clientes) {
         if (c.getCpf() == cpf) {
             clientes.remove(c);
@@ -104,7 +104,7 @@ public class Estacionamento {
     }
     return false;
 }
-public boolean removerVeiculoCliente(int cpf, String placa) {
+public boolean removerVeiculoCliente(String cpf, String placa) {
     Cliente cliente = buscarClientePorCpf(cpf);
 
     if (cliente == null) return false;

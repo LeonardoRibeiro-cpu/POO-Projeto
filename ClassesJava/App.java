@@ -84,8 +84,7 @@ public class App {
                     break;
                 case 11:
                     System.out.print("CPF do Cliente a ser removido: ");
-                    int cpfCli = s.nextInt();
-                    s.nextLine();
+                    String cpfCli = s.nextLine();
                     boolean removedCli = est.removerCliente(cpfCli);
                     if (removedCli) {
                         System.out.println("Cliente removido com sucesso!");
@@ -96,8 +95,7 @@ public class App {
                 
                 case 12:
                     System.out.print("CPF do Cliente: ");
-                    int cpf = s.nextInt();
-                    s.nextLine();
+                    String cpf = s.nextLine();
                     Cliente cliente = est.buscarClientePorCpf(cpf);
                     if (cliente == null) {
                         System.out.println("Cliente não encontrado.");
@@ -147,8 +145,8 @@ public class App {
         System.out.print("Email do Cliente: ");
         String email = s.nextLine();
         System.out.print("CPF do Cliente: ");
-        int cpf = s.nextInt();
-        s.nextLine();
+        String cpf = s.nextLine();
+       
         Cliente c = new Cliente(nome, email, cpf);
         est.adicionarCliente(c);
         System.out.println("Cliente adicionado com sucesso!");
@@ -156,8 +154,8 @@ public class App {
     
     public static void adicionarVeiculoCliente(Estacionamento est) {
         System.out.print("CPF do Cliente: ");
-        int cpf = s.nextInt();
-        s.nextLine();
+        String cpf = s.nextLine();
+     
         Cliente cliente = est.buscarClientePorCpf(cpf);
         if (cliente == null) {
             System.out.println("Cliente não encontrado.");
@@ -176,8 +174,7 @@ public class App {
     
     public static void ocuparVaga(Estacionamento est) {
        System.out.print("CPF do Cliente: ");
-    int cpf = s.nextInt();
-    s.nextLine();
+    String cpf = s.nextLine();
 
     Cliente cliente = est.buscarClientePorCpf(cpf);
     if (cliente == null) {
@@ -226,8 +223,7 @@ public class App {
    
     public static void removerCliente(Estacionamento est) {
         System.out.print("CPF do Cliente a ser removido: ");
-        int cpf = s.nextInt();
-        s.nextLine();
+        String cpf = s.nextLine();
         boolean removed = est.removerCliente(cpf);
         if (removed) {
             System.out.println("Cliente removido com sucesso!");
@@ -249,8 +245,7 @@ public class App {
 
     public static void removerVeiculoCliente(Estacionamento est) {
         System.out.print("CPF do Cliente: ");
-        int cpf = s.nextInt();
-        s.nextLine();
+        String cpf = s.nextLine();
         Cliente cliente = est.buscarClientePorCpf(cpf);
         if (cliente == null) {
             System.out.println("Cliente não encontrado.");
@@ -280,8 +275,8 @@ public class App {
 
     public static void exibirVeiculosCliente(Estacionamento est) {
         System.out.print("CPF do Cliente: ");
-        int cpf = s.nextInt();
-        s.nextLine();
+        String cpf = s.nextLine();
+      
         Cliente cliente = est.buscarClientePorCpf(cpf);
         if (cliente == null) {
             System.out.println("Cliente não encontrado.");
