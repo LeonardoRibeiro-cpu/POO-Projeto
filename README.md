@@ -1,62 +1,60 @@
 @startuml
-class App {
+skinparam classAttributeIconSize 0
+skinparam shadowing true
+skinparam class {
+    BackgroundColor #F9F9F9
+    BorderColor #333
+    ArrowColor #333
+}
+skinparam packageStyle rectangle
+
+left to right direction
+
+package "Pessoas" #DDDDFF {
+    class Cliente {
+        - nome : String
+        - endereco : String
+        - telefone : String
+        - email : String
+        --
+        + getNome() : String
+        + getEndereco() : String
+        + getTelefone() : String
+        + getEmail() : String
+    }
+
+    class Funcionario {
+        - nome : String
+        - cargo : String
+        - salario : double
+        --
+        + getNome() : String
+        + getCargo() : String
+        + getSalario() : double
+    }
 }
 
-class Cliente {
-  private String nome
-  private String endereco
-  private String telefone
-  private String email
-  public getNome() : String
-  public getEndereco() : String
-  public getTelefone() : String
-  public getEmail() : String
+package "Produtos & Serviços" #DDFFDD {
+    class Produto {
+        - nome : String
+        - preco : double
+        - quantidade : int
+        --
+        + getNome() : String
+        + getPreco() : double
+        + getQuantidade() : int
+    }
+
+    class Servico {
+        - descricao : String
+        - valor : double
+        --
+        + getDescricao() : String
+        + getValor() : double
+    }
 }
 
-class Funcionario {
-  private String nome
-  private String cargo
-  private double salario
-  public getNome() : String
-  public getCargo() : String
-  public getSalario() : double
-}
-
-class Produto {
-  private String nome
-  private double preco
-  private int quantidade
-  public getNome() : String
-  public getPreco() : double
-  public getQuantidade() : int
-}
-
-class Servico {
-  private String descricao
-  private double valor
-  public getDescricao() : String
-  public getValor() : double
-}
-
-class Venda {
-  private Cliente cliente
-  private Funcionario funcionario
-  private Produto produto
-  private int quantidade
-  public getCliente() : Cliente
-  public getFuncionario() : Funcionario
-  public getProduto() : Produto
-  public getQuantidade() : int
-}
-
-class Veiculo {
-  private String modelo
-  private String marca
-  private int ano
-  private String cor
-  public getModelo() : String
-  public getMarca() : String
-  public getAno() : int
-  public getCor() : String
-}
-@enduml
+package "Operações" #FFDDDD {
+    class Venda {
+        - cliente : Cliente
+        - funcionar
