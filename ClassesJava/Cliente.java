@@ -65,18 +65,17 @@ public class Cliente {
         }
     }
 
-    public String exibe(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("Cliente: ").append(nome)
-          .append("\nEmail: ").append(email)
-          .append("\nCPF: ").append(cpf)
-          .append("\nVeículos:");
+        public String exibe(){
+        String texto = "Cliente: " + nome +
+                   "\nEmail: " + email +
+                   "\nCPF: " + cpf +
+                   "\nVeículos:";
 
         for (Veiculo v : veiculos) {
             texto += "\n - " + v.exibe();
-        }
-
-        return sb.toString();
+    } 
+      return texto;
+    
     }
     }
 
