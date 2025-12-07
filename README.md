@@ -1,4 +1,1 @@
-## 📘 Diagrama de Classes
-
-![Diagrama de Classes](http://www.plantuml.com/plantuml/png/XPB1Ii8m48NtESMLb19o0A55qOEYO3Z8K3E1jny4c6eP5gF19TS2zvkfqlzvfk0WFZ8Wmwb9KM3m-HEpCVrZ8ahWVp5nRf65jWPy9CvWjSVvJPTcmD49dD8keHULOOFBKX-KdcJ8j_3p9I5W9GJCLJkmpg9uFRiHTcIsBC0roZZcb0lweKLVY8rcqIEj3xaMLCr0TQ_jqp9W0L5g3y3xpbqK_sXqgcJjvmp_6ABUub57GZ2r2ynE88_GF )
 
