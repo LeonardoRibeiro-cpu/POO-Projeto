@@ -17,7 +17,6 @@ public class Cliente {
 
     public Cliente(String nome, String email, int cpf, List<Veiculo> veiculos) {
 
-
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
@@ -60,18 +59,16 @@ public class Cliente {
     }
 
     public String exibe(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("Cliente: ").append(nome)
-          .append("\nEmail: ").append(email)
-          .append("\nCPF: ").append(cpf)
-          .append("\nVeículos:");
+        String texto = "Cliente: " + nome +
+                   "\nEmail: " + email +
+                   "\nCPF: " + cpf +
+                   "\nVeículos:";
 
         for (Veiculo v : veiculos) {
-            sb.append("\n  - ").append(v.toString());
-        }
-
-        return sb.toString();
+            texto += "\n - " + v.exibe();
+    } 
+      return texto;
     }
-    }
+}
 
 
