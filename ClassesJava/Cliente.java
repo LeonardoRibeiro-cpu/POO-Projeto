@@ -73,7 +73,7 @@ public class Cliente {
           .append("\nVeículos:");
 
         for (Veiculo v : veiculos) {
-            sb.append("\n  - ").append(v.toString());
+            texto += "\n - " + v.exibe();
         }
 
         return sb.toString();
