@@ -21,7 +21,7 @@ public class Vagas {
         return true;
     }
 
-  
+    
     public boolean liberar() {
         if (!this.ocupada) {
             return false; 
@@ -30,7 +30,17 @@ public class Vagas {
         this.ocupada = false;
         return true;
     }
+     public boolean isOcupada() {
+        return ocupada;
+    }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
     public String exibe() {
         if (ocupada) {
             return "Vaga " + numero + " - Ocupada - " + veiculo.exibe();

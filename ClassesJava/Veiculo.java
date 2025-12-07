@@ -15,4 +15,15 @@ public class Veiculo {
    public String exibe() {
     return modelo + "Cor: "+ cor + " - Placa: " + placa;
  }
+  public String getPlaca() {
+        return placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getCor() {
+        return cor;
+    }
 } 
