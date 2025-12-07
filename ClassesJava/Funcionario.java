@@ -16,4 +16,8 @@ public class Funcionario {
     public String exibe() {
         return "Nome: " + nome + " - CPF: " + cpf + " - Cargo: " + cargo + " - Salário: " + salario;
     }
+
+    public String getCpf() {
+        return cpf;
+    }
 }

@@ -12,6 +12,7 @@ public class Veiculo {
         this.modelo = modelo;
         this.cor = cor;
     }
+    
    public String exibe() {
     return modelo + "Cor: "+ cor + " - Placa: " + placa;
  }

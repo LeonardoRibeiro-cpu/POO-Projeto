@@ -42,7 +42,14 @@ public class Estacionamento {
 
         return vagas.get(numero - 1).liberar();
     }
-
+    public Cliente buscarClientePorCpf(int cpf) {
+    for (Cliente c : clientes) {
+        if (c.getCpf() == cpf) {
+            return c;
+        }
+    }
+    return null;
+}
     public void exibirVagas() {
         System.out.println("=== LISTA DE VAGAS ===");
         for (Vagas v : vagas) {
@@ -65,7 +72,15 @@ public class Estacionamento {
             System.out.println(f.exibe());
         }
     }
-
+   public boolean removerFuncionario(String cpf) {
+    for (Funcionario f : funcionarios) {
+        if (f.getCpf().equals(cpf)) {
+            funcionarios.remove(f);
+            return true;
+        }
+    }
+    return false;
+}
     // -------------------------
     // MÉTODOS DE CLIENTES
     // -------------------------
@@ -80,6 +95,22 @@ public class Estacionamento {
             System.out.println(c.exibe());
         }
     }
+    public boolean removerCliente(int cpf) {
+    for (Cliente c : clientes) {
+        if (c.getCpf() == cpf) {
+            clientes.remove(c);
+            return true;
+        }
+    }
+    return false;
+}
+public boolean removerVeiculoCliente(int cpf, String placa) {
+    Cliente cliente = buscarClientePorCpf(cpf);
+
+    if (cliente == null) return false;
+
+    return cliente.removerVeiculo(placa);
+}
 
     // -------------------------
     // EXIBIÇÃO COMPLETA

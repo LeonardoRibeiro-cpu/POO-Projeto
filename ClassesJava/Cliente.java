@@ -15,16 +15,22 @@ public class Cliente {
      
     }
 
-    public Cliente(String nome, String email, int cpf, List<Veiculo> veiculos) {
-
-
+    public Cliente(String nome, String email, int cpf) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
-        this.veiculos = veiculos;
+        this.veiculos = new ArrayList<>();
     }
 
-    
+    public boolean removerVeiculo(String placa) {
+    for (Veiculo v : veiculos) {
+        if (v.getPlaca().equalsIgnoreCase(placa)) {
+            veiculos.remove(v);
+            return true;
+        }
+    }
+    return false;
+}
     public String getNome() {
         return nome;
     }
