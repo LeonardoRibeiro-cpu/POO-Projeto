@@ -8,11 +8,11 @@ public class Cliente {
     private String email;
     private int cpf;
     private List<Veiculo> veiculos;
-    public static int contadorClientes;
+
 
     public Cliente() {
         this.veiculos = new ArrayList<>();
-        contadorClientes++;
+     
     }
 
     public Cliente(String nome, String email, int cpf, List<Veiculo> veiculos) {

@@ -4,6 +4,8 @@ public class Vagas {
     private int numero;
     private boolean ocupada;
     private Veiculo veiculo;
+
+    private static int ocupadas;
     public Vagas() {
     }
        public Vagas(int numero) {
@@ -18,6 +20,7 @@ public class Vagas {
         }
         this.veiculo = v;
         this.ocupada = true;
+        ocupadas++;
         return true;
     }
 
@@ -28,6 +31,7 @@ public class Vagas {
         }
         this.veiculo = null;
         this.ocupada = false;
+         ocupadas--;
         return true;
     }
      public boolean isOcupada() {
@@ -41,6 +45,9 @@ public class Vagas {
     public Veiculo getVeiculo() {
         return veiculo;
     }
+    public static int getTotalOcupadas() {
+    return ocupadas;
+}
     public String exibe() {
         if (ocupada) {
             return "Vaga " + numero + " - Ocupada - " + veiculo.exibe();
