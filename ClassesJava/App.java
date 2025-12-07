@@ -110,7 +110,7 @@ public class App {
             System.out.print("CPF do Funcionário: ");
             String cpf = s.nextLine();
 
-            if (cpf.length() != 11) throw new Exception("CPF inválido!");
+            if (cpf.length() != 11) throw new Exception("CPF inválido! Deve ter 11 dígitos.");
 
             System.out.print("Cargo do Funcionário: ");
             String cargo = s.nextLine();
@@ -140,7 +140,7 @@ public class App {
             System.out.print("CPF do Cliente: ");
             String cpf = s.nextLine();
 
-            if (cpf.length() != 11) throw new Exception("CPF inválido!");
+            if (cpf.length() != 11) throw new Exception("CPF inválido! Deve ter 11 dígitos.");
 
             Cliente c = new Cliente(nome, email, cpf);
             est.adicionarCliente(c);
